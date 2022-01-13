@@ -10,7 +10,7 @@ spec:
   project: default
   source:
     path: quarkus-subchart/
-    repoURL: https://github.com/smrowley-lab/gitops-root
+    repoURL: https://github.com/smrowley-lab/helm-subchart-demo
     targetRevision: main
   syncPolicy:
     automated:
