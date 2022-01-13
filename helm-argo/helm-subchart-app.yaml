@@ -10,7 +10,7 @@ spec:
   project: default
   source:
     path: quarkus-subchart/
-    repoURL: https://github.com/christianh814/gitops-examples
+    repoURL: https://github.com/smrowley-lab/gitops-root
     targetRevision: master
   syncPolicy:
     automated:
