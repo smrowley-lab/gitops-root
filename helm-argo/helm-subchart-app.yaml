@@ -11,7 +11,7 @@ spec:
   source:
     path: quarkus-subchart/
     repoURL: https://github.com/smrowley-lab/gitops-root
-    targetRevision: master
+    targetRevision: main
   syncPolicy:
     automated:
       prune: true
