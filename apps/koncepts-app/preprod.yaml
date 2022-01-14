@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: koncepts-preprod
+  namespace: openshift-gitops
+spec:
+  destination:
+    namespace: koncepts-preprod
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: overlays/preprod
+    repoURL: https://github.com/smrowley-lab/argo-kustomize-demo
+    targetRevision: main
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - CreateNamespace=true
