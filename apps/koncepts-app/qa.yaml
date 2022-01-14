@@ -1,19 +1,17 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: bootstrap
+  name: koncepts-qa
   namespace: openshift-gitops
 spec:
   destination:
-    namespace: ''
+    namespace: koncepts-qa
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: apps
-    repoURL: https://github.com/smrowley-lab/gitops-root
+    path: overlays/qa
+    repoURL: https://github.com/smrowley-lab/argo-kustomize-demo
     targetRevision: main
-    directory:
-      recurse: true
   syncPolicy:
     automated:
       prune: true
